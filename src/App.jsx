@@ -131,7 +131,7 @@ const App = () => {
       </label>
       <button
         onClick={handleButtonClick}
-        className="bg-blue-500 hover:bg-green-700 text-black font-bold py-2 px-4 rounded"
+        className="bg-blue-500 hover:bg-green-700 text-black font-bold py-2 px-4 rounded mx-auto"
       >
         ¿A Dónde Vamos Ir Rick????
       </button>
@@ -156,9 +156,12 @@ const App = () => {
             onClick={prevPage}
             className="bg-gradient-to-r from-green-400 to-yellow-400 text-white font-bold py-2 px-4 rounded-l"
           >
-            Anterior
+            {/* Anterior */}
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+            </svg>
           </button>
-          {Array.from({ length: totalPages }, (_, index) => index + 1).map((page) => (
+          {Array.from({ length: Math.min(totalPages, 3) }, (_, index) => index + 1).map((page) => (
             <button
               key={page}
               onClick={() => setCurrentPage(page)}
@@ -173,7 +176,10 @@ const App = () => {
             onClick={nextPage}
             className="bg-gradient-to-r from-green-400 to-yellow-400 text-white font-bold py-2 px-4 rounded-r"
           >
-            Siguiente
+            {/* Siguiente */}
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            </svg>
           </button>
         </div>
       )}
