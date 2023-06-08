@@ -1,1 +1,0 @@
-# Lukas_-RickSanchezApp-
