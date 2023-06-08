@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
+
 const Location = ({ location }) => {
   const { name, type, dimension, residents } = location;
 
